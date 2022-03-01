@@ -419,7 +419,7 @@
       "step": "",
       "vrml": ""
     },
-    "page_layout_descr_file": "${KICAD_RCAS_TEMPLATE_SHEET}/RCAS_A3_PCB_Template.kicad_wks"
+    "page_layout_descr_file": "D:/Electronics/Repositories/Libraries/KiCad/Templates/RCAS_A3_PCB_Template.kicad_wks"
   },
   "schematic": {
     "annotate_start_num": 0,
