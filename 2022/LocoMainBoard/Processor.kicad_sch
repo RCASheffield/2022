@@ -1388,6 +1388,7 @@
     )
   )
 
+
   (junction (at 194.31 265.43) (diameter 0) (color 0 0 0 0)
     (uuid 006bc43b-d3a8-4a38-a8dc-5a24da3f9b4d)
   )
@@ -4654,7 +4655,7 @@
     (uuid 00000000-0000-0000-0000-000064089764)
     (property "Reference" "U16" (id 0) (at 308.737 86.8426 0))
     (property "Value" "NUCLEO64-F103RB" (id 1) (at 308.737 89.154 0))
-    (property "Footprint" "Module:ST_Morpho_Connector_144_STLink" (id 2) (at 287.02 190.5 0)
+    (property "Footprint" "RCAS_Nucleo_F103RB:ST_NUCLEO-F103RB" (id 2) (at 287.02 190.5 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
     (property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/data_brief/DM00105918.pdf" (id 3) (at 250.19 177.8 0)

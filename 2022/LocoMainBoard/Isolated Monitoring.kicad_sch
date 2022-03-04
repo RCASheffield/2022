@@ -535,11 +535,11 @@
         )
       )
     )
-    (symbol "RCAS_Power_Symbols:+VBAT_Enabled" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "RCAS_Power_Symbols:+VBAT_B" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (id 0) (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "+VBAT_Enabled" (id 1) (at 0 3.556 0)
+      (property "Value" "+VBAT_B" (id 1) (at 0 3.556 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (id 2) (at 0 0 0)
@@ -551,10 +551,10 @@
       (property "ki_keywords" "power-flag" (id 4) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"+VBAT_Enabled\"" (id 5) (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"+VBAT_IN\"" (id 5) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "+VBAT_Enabled_0_1"
+      (symbol "+VBAT_B_0_1"
         (polyline
           (pts
             (xy -0.762 1.27)
@@ -580,9 +580,9 @@
           (fill (type none))
         )
       )
-      (symbol "+VBAT_Enabled_1_1"
+      (symbol "+VBAT_B_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+VBAT" (effects (font (size 1.27 1.27))))
+          (name "+VBAT_B" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -777,6 +777,7 @@
       )
     )
   )
+
 
   (junction (at 171.45 96.52) (diameter 0) (color 0 0 0 0)
     (uuid 06665bf8-cef1-4e75-8d5b-1537b3c1b090)
@@ -2529,19 +2530,19 @@
     (pin "2" (uuid b5a90c87-8ff1-4dbd-9e50-a52d990a9095))
   )
 
-  (symbol (lib_id "RCAS_Power_Symbols:+VBAT_Enabled") (at 207.01 81.28 0) (unit 1)
-    (in_bom yes) (on_board yes)
-    (uuid 00000000-0000-0000-0000-00006262f589)
-    (property "Reference" "#PWR095" (id 0) (at 207.01 85.09 0)
+  (symbol (lib_id "RCAS_Power_Symbols:+VBAT_B") (at 207.01 81.28 0) (unit 1)
+    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (uuid 4586a01d-cbcd-4c5d-9db7-c9b84a1c7aa3)
+    (property "Reference" "#PWR?" (id 0) (at 207.01 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+VBAT_Enabled" (id 1) (at 207.391 76.8858 0))
+    (property "Value" "+VBAT_B" (id 1) (at 207.01 77.7042 0))
     (property "Footprint" "" (id 2) (at 207.01 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 207.01 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 17d2a24c-9f7d-466a-a9de-9008721f6b9d))
+    (pin "1" (uuid 0efc4298-e118-4533-b167-f23d9b9a1724))
   )
 )
