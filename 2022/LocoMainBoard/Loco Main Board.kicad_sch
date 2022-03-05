@@ -1379,8 +1379,14 @@
     (path "/00000000-0000-0000-0000-00005f8fe876/00000000-0000-0000-0000-0000605e8aaa"
       (reference "#PWR0132") (unit 1) (value "GND") (footprint "")
     )
+    (path "/00000000-0000-0000-0000-00005f763968/e560ce5a-1c53-49df-a064-2bae95ef8312"
+      (reference "#PWR0133") (unit 1) (value "+VBAT_B") (footprint "")
+    )
     (path "/00000000-0000-0000-0000-00005f8fe876/00000000-0000-0000-0000-000060b966ac"
       (reference "#PWR0134") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-0000605e4275/b36dd262-c2a9-44d1-b6b7-768aff27f47f"
+      (reference "#PWR0135") (unit 1) (value "+VBAT_B") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005f8fe876/00000000-0000-0000-0000-00006123d246"
       (reference "#PWR0136") (unit 1) (value "+3V3") (footprint "")
@@ -1400,11 +1406,29 @@
     (path "/00000000-0000-0000-0000-00005f8fe876/00000000-0000-0000-0000-0000613f636e"
       (reference "#PWR0141") (unit 1) (value "GND") (footprint "")
     )
+    (path "/00000000-0000-0000-0000-0000605e4275/f96a9db0-61d7-4ca9-8d45-47b9bb783398"
+      (reference "#PWR0142") (unit 1) (value "+VBAT_B") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005f9510ce/4586a01d-cbcd-4c5d-9db7-c9b84a1c7aa3"
+      (reference "#PWR0143") (unit 1) (value "+VBAT_B") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005fb378b1/8a92220e-cb31-48c0-b70a-e013f299a793"
+      (reference "#PWR0144") (unit 1) (value "+VBAT_B") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005f930f6b/3556a6a9-202f-4225-b1fa-8661ac8676b5"
+      (reference "#PWR0145") (unit 1) (value "+VBAT_B") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005f930f6b/05ce0a69-463c-4928-9411-c54ce0de6bcb"
+      (reference "#PWR0146") (unit 1) (value "+VBAT_B") (footprint "")
+    )
     (path "/00000000-0000-0000-0000-00005f8fe876/00000000-0000-0000-0000-000061d96b27"
       (reference "#PWR0147") (unit 1) (value "GND") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005f8fe876/00000000-0000-0000-0000-00006150ab3c"
       (reference "#PWR0148") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00005f930f6b/dc5132fe-8acb-4e04-9a9d-7faa81915fe4"
+      (reference "#PWR0149") (unit 1) (value "+VBAT_B") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005f8fe876/00000000-0000-0000-0000-00006026cb8c"
       (reference "#PWR0151") (unit 1) (value "+3V3") (footprint "")
@@ -1642,30 +1666,6 @@
     )
     (path "/00000000-0000-0000-0000-00005f8fe876/00000000-0000-0000-0000-00006460f53d"
       (reference "#PWR0233") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-00005f930f6b/05ce0a69-463c-4928-9411-c54ce0de6bcb"
-      (reference "#PWR?") (unit 1) (value "+VBAT_B") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-00005f930f6b/3556a6a9-202f-4225-b1fa-8661ac8676b5"
-      (reference "#PWR?") (unit 1) (value "+VBAT_B") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-00005f9510ce/4586a01d-cbcd-4c5d-9db7-c9b84a1c7aa3"
-      (reference "#PWR?") (unit 1) (value "+VBAT_B") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-00005fb378b1/8a92220e-cb31-48c0-b70a-e013f299a793"
-      (reference "#PWR?") (unit 1) (value "+VBAT_B") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-0000605e4275/b36dd262-c2a9-44d1-b6b7-768aff27f47f"
-      (reference "#PWR?") (unit 1) (value "+VBAT_B") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-00005f930f6b/dc5132fe-8acb-4e04-9a9d-7faa81915fe4"
-      (reference "#PWR?") (unit 1) (value "+VBAT_B") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-00005f763968/e560ce5a-1c53-49df-a064-2bae95ef8312"
-      (reference "#PWR?") (unit 1) (value "+VBAT_B") (footprint "")
-    )
-    (path "/00000000-0000-0000-0000-0000605e4275/f96a9db0-61d7-4ca9-8d45-47b9bb783398"
-      (reference "#PWR?") (unit 1) (value "+VBAT_B") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005fb378b1/00000000-0000-0000-0000-0000604d392f"
       (reference "C1") (unit 1) (value "1nF") (footprint "RCAS_Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder")

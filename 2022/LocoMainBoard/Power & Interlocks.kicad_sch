@@ -4858,7 +4858,7 @@
   (symbol (lib_id "RCAS_Power_Symbols:+VBAT_B") (at 195.58 31.75 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e560ce5a-1c53-49df-a064-2bae95ef8312)
-    (property "Reference" "#PWR?" (id 0) (at 195.58 35.56 0)
+    (property "Reference" "#PWR0133" (id 0) (at 195.58 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+VBAT_B" (id 1) (at 195.58 28.1742 0))

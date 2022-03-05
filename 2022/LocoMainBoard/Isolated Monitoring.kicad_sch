@@ -778,7 +778,6 @@
     )
   )
 
-
   (junction (at 171.45 96.52) (diameter 0) (color 0 0 0 0)
     (uuid 06665bf8-cef1-4e75-8d5b-1537b3c1b090)
   )
@@ -2533,7 +2532,7 @@
   (symbol (lib_id "RCAS_Power_Symbols:+VBAT_B") (at 207.01 81.28 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 4586a01d-cbcd-4c5d-9db7-c9b84a1c7aa3)
-    (property "Reference" "#PWR?" (id 0) (at 207.01 85.09 0)
+    (property "Reference" "#PWR0143" (id 0) (at 207.01 85.09 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+VBAT_B" (id 1) (at 207.01 77.7042 0))
