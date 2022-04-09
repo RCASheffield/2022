@@ -326,15 +326,15 @@ L RCAS_Sensors:IR_Receiver_Module_TSOP75xxx U3
 U 1 1 602612B8
 P 5650 6750
 F 0 "U3" H 5600 7200 50  0000 C CNN
-F 1 "TSOP75436" H 5600 7100 50  0000 C CNN
+F 1 "TSOP75456" H 5600 7100 50  0000 C CNN
 F 2 "RCAS_Sensor:TSOP75xxx_IR_Receiver_Module" H 5750 7050 30  0001 C CNN
 F 3 "" H 5750 7050 30  0001 C CNN
 F 4 "1.34" H 5650 6750 50  0001 C CNN "Cost"
 F 5 "Vishay" H 5650 6750 50  0001 C CNN "Manufacturer"
-F 6 "TSOP75436TR" H 5650 6750 50  0001 C CNN "Manufacturer Part Number"
-F 7 "36.0kHz IR Receiver, 45m Range" H 5650 6750 50  0001 C CNN "Part Description"
+F 6 "TSOP75456TR" H 5650 6750 50  0001 C CNN "Manufacturer Part Number"
+F 7 "56.0kHz IR Receiver, 45m Range" H 5650 6750 50  0001 C CNN "Part Description"
 F 8 "Digikey" H 5650 6750 50  0001 C CNN "Supplier"
-F 9 "TSOP75436CT-ND" H 5650 6750 50  0001 C CNN "Supplier Part Number"
+F 9 "TSOP75456CT-ND" H 5650 6750 50  0001 C CNN "Supplier Part Number"
 	1    5650 6750
 	1    0    0    -1  
 $EndComp
@@ -467,7 +467,7 @@ Connection ~ 7200 6650
 Wire Wire Line
 	7200 6650 7800 6650
 Text Notes 6800 6900 0    50   ~ 0
-Fit R2 and remove R1 if 36kHz sensor not used
+Fit R2 and remove R1 if 56kHz sensor not used
 $Comp
 L RCAS_Test_Points:TestPoint TP1
 U 1 1 60273EA4
@@ -506,7 +506,7 @@ F 0 "TP3" H 7800 6920 50  0000 C CNN
 F 1 "Test Point" H 7800 6850 50  0001 C CNN
 F 2 "RCAS_TestPoint:TestPoint_Pad_1.5x1.5mm" H 8000 6650 50  0001 C CNN
 F 3 "~" H 8000 6650 50  0001 C CNN
-F 4 "36kHz Sensor C" H 7800 6850 50  0000 C CNN "Label"
+F 4 "56kHz Sensor C" H 7800 6850 50  0000 C CNN "Label"
 	1    7800 6650
 	1    0    0    -1  
 $EndComp
@@ -524,9 +524,9 @@ Text Label 10150 4800 0    50   ~ 0
 Text Label 10150 5300 0    50   ~ 0
 A.B+~C
 Text Notes 5400 3400 0    50   ~ 0
-Uses 38kHz sensor x2 for beacon detection.\nAdditional 36kHz sensor to mask output when saturated by a source. Prevents false triggering by sunlight.\nOutput of sensors is LOW when modulated IR is detected.
+Uses 38kHz sensor x2 for beacon detection.\nAdditional 56kHz sensor to mask output when saturated by a source. Prevents false triggering by sunlight.\nOutput of sensors is LOW when modulated IR is detected.
 Text Notes 12500 5650 0    50   ~ 0
-Output LOW when either 38kHz sensor triggered \nand the 36kHz sensor is not triggered, else HIGH.\nSolder wires directly into board.
+Output LOW when either 38kHz sensor triggered \nand the 56kHz sensor is not triggered, else HIGH.\nSolder wires directly into board.
 $Comp
 L RCAS_Mechanical:MountingHole H1
 U 1 1 60252380
@@ -642,7 +642,7 @@ Connection ~ 11500 5200
 Wire Wire Line
 	11500 5200 11500 5500
 $Comp
-L USER_Connectors_Generic:Conn_01x04 J1
+L RCAS_Connectors_Generic:Conn_01x04 J1
 U 1 1 60268ABE
 P 12400 5200
 F 0 "J1" H 12500 5250 50  0000 L CNN
