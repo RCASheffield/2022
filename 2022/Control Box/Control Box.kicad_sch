@@ -2375,7 +2375,7 @@
       (reference "R506") (unit 1) (value "100R") (footprint "RCAS_Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005f7561a0/00000000-0000-0000-0000-00005f75a362"
-      (reference "R601") (unit 1) (value "47R") (footprint "RCAS_Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
+      (reference "R601") (unit 1) (value "0R") (footprint "RCAS_Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005f7561a0/00000000-0000-0000-0000-00005f76df17"
       (reference "R602") (unit 1) (value "10k") (footprint "RCAS_Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
@@ -2418,9 +2418,6 @@
     )
     (path "/00000000-0000-0000-0000-00005f7561a0/00000000-0000-0000-0000-00005f770a34"
       (reference "R615") (unit 1) (value "4k7") (footprint "RCAS_Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
-    )
-    (path "/00000000-0000-0000-0000-00005f7561a0/c625307f-d430-4be2-a418-a63bc0251134"
-      (reference "R616") (unit 1) (value "0R") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005f75b1b6/00000000-0000-0000-0000-00005fada307"
       (reference "SW301") (unit 1) (value "JS5208") (footprint "RCAS_Button_Switch_SMD:Switch_Nav_12.4x12.4mm")
