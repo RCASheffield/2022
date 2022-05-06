@@ -34,7 +34,7 @@ volatile unsigned long packets_sent = 0;
 Packet transmit_buffer;
 volatile bool transmit_busy = false;
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
-	HAL_GPIO_WritePin(LOCO_TX_ENABLE_GPIO_Port, LOCO_TX_ENABLE_Pin, (GPIO_PinState)0);
+	HAL_GPIO_WritePin(LOCO_TX_ENABLE_GPIO_Port, LOCO_TX_ENABLE_Pin, GPIO_PIN_RESET);
 	packets_sent += 1;
 	transmit_busy = false;
 }
@@ -48,7 +48,9 @@ volatile unsigned long invalid_packet_count = 0;
 Packet receive_buffer;
 volatile int receive_state;
 unsigned long last_packet_tick = HAL_GetTick();
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
 	last_packet_tick = HAL_GetTick();
 	if (receive_state == 0) {
 		bytes_received += 1;
@@ -93,9 +95,10 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 	}
 }
 
-void send_packet(UART_HandleTypeDef *huart, uint8_t address, uint8_t command, uint8_t *data, uint8_t length) {
+void send_packet(UART_HandleTypeDef *huart, uint8_t address, uint8_t command, uint8_t *data, uint8_t length)
+{
 	// Wait for any ongoing transmission to finish
-	while (transmit_busy);
+	//while (transmit_busy);
 	transmit_busy = true;
 
 	// Generate packet
@@ -113,7 +116,7 @@ void send_packet(UART_HandleTypeDef *huart, uint8_t address, uint8_t command, ui
 	if (length < 16) transmit_buffer.data[length] = transmit_buffer.checksum;
 
 	// Start transmission
-	HAL_GPIO_WritePin(LOCO_TX_ENABLE_GPIO_Port, LOCO_TX_ENABLE_Pin, (GPIO_PinState)1);
+	HAL_GPIO_WritePin(LOCO_TX_ENABLE_GPIO_Port, LOCO_TX_ENABLE_Pin, GPIO_PIN_SET);
 	HAL_UART_Transmit_IT(huart, (uint8_t*)&transmit_buffer, (uint16_t)length+3);
 }
 
@@ -129,7 +132,8 @@ void clear_packet(Packet* packet) {
 }
 
 // Check if valid packet in queue and remove any invalid
-bool packet_available() {
+bool packet_available()
+{
 	while (incoming_packets.size() > 0) {
 		Packet* packet = get_packet();
 		uint8_t calculated_checksum = packet->info;
@@ -144,7 +148,8 @@ bool packet_available() {
 	return false;
 }
 
-void start_receiving(UART_HandleTypeDef *huart) {
+void start_receiving(UART_HandleTypeDef *huart)
+{
 	receive_state = 0;
 	HAL_UART_AbortReceive_IT(huart);
 	HAL_UART_Receive_IT(huart, &receive_buffer.start, (uint16_t) 1);

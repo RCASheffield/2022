@@ -88,6 +88,7 @@ uint32_t TxMailbox;
 int datacheck = 1;
 int j = 0;
 
+/*
 void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
 	HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO1, &RxHeader, RxData);
@@ -95,7 +96,7 @@ void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
 	{
 		datacheck = 1;
 	}
-}
+}*/
 /////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////// Encoder Position
@@ -169,7 +170,7 @@ int main(void)
   // Activate the encoder
   HAL_TIM_Encoder_Start_IT(&htim1, TIM_CHANNEL_ALL);
 
-
+  init_modules(&huart2); // Start receiving
   mainboard();
 
 
