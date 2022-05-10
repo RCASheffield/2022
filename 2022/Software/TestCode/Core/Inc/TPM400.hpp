@@ -28,23 +28,30 @@ public:
 	uint32_t tx_mailbox;
 
 	// Send data over CAN bus
-	void send_data() {
+	void send_data()
+	{
 		tx_header.ExtId = 0x60;			// Message id
 		tx_header.IDE = CAN_ID_EXT;		// Extended 29 bit id
 		tx_header.RTR = CAN_RTR_DATA;	// Data frame
 		tx_header.DLC = 8;				// 8 bytes
 		tx_header.TransmitGlobalTime = DISABLE;
 
-		if (HAL_CAN_AddTxMessage(hcan, &tx_header, tx_data, &tx_mailbox) != HAL_OK) {
+//	HAL_CAN_AddTxMessage(hcan, &tx_header, tx_data, &tx_mailbox);
+
+		if (HAL_CAN_AddTxMessage(hcan, &tx_header, tx_data, &tx_mailbox) != HAL_OK)
+		{
 			Error_Handler();
 		}
 
 		// Wait for ongoing transmissions to complete
-		while (HAL_CAN_GetTxMailboxesFreeLevel(hcan) != 3) {}
+		while (HAL_CAN_GetTxMailboxesFreeLevel(hcan) != 3)
+		{
+		}
 	}
 
 	// Read data received over CAN bus
-	void read_data() {
+	void read_data()
+	{
 		if (HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data) != HAL_OK) {
 			Error_Handler();
 		}
@@ -53,7 +60,8 @@ public:
 	}
 
 	// Enable CAN heading control on motor controller
-	void enable_can_control() {
+	void enable_can_control()
+	{
 		// Set HEADING_NET_SELECT to 0xaa
 		uint8_t reg_low = HEADING_NET_SELECT & 0xff;
 		uint8_t reg_high = (HEADING_NET_SELECT >> 8) & 0xff;
@@ -72,7 +80,8 @@ public:
 	}
 
 	// Set motor controller heading over CAN, -4000 to 4000
-	void set_heading(int16_t heading) {
+	void set_heading(int16_t heading)
+	{
 		// -4000 = 0xf060
 		// +4000 = 0x0fa0
 

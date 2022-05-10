@@ -34,17 +34,20 @@ public:
 	uint8_t* data_pointers [VAR_MAX] = {(uint8_t*)&state, (uint8_t*)&speed_setpoint, (uint8_t*)&actual_speed, (uint8_t*)&horn};
 	uint8_t data_sizes [VAR_MAX] = {sizeof(state), sizeof(speed_setpoint), sizeof(actual_speed), sizeof(horn)};
 
-	LocoModule(int _id, ErrorHandler* _error_handler) {
+	LocoModule(int _id, ErrorHandler* _error_handler)
+	{
 		id = _id;
 		error_handler = _error_handler;
 	}
 
-	void send_data(uint8_t variable_index) {
+	void send_data(uint8_t variable_index)
+	{
 		uint8_t length = data_sizes[variable_index];
 		uint8_t* data = data_pointers[variable_index];
 		uint8_t new_data[length + 1];
 		new_data[0] = variable_index;
-		for (int i = 0; i < length; i++) {
+		for (int i = 0; i < length; i++)
+		{
 			new_data[i + 1] = data[i];
 		}
 		send_packet(huart, id, OK, new_data, (uint16_t) length + 1);

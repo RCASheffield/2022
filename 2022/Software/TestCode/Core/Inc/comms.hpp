@@ -33,7 +33,9 @@ volatile unsigned long packets_sent = 0;
 
 Packet transmit_buffer;
 volatile bool transmit_busy = false;
-void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
 	HAL_GPIO_WritePin(LOCO_TX_ENABLE_GPIO_Port, LOCO_TX_ENABLE_Pin, GPIO_PIN_RESET);
 	packets_sent += 1;
 	transmit_busy = false;
@@ -49,7 +51,7 @@ Packet receive_buffer;
 volatile int receive_state;
 unsigned long last_packet_tick = HAL_GetTick();
 
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+/*void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	last_packet_tick = HAL_GetTick();
 	if (receive_state == 0) {
@@ -94,11 +96,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 		return;
 	}
 }
-
+*/
 void send_packet(UART_HandleTypeDef *huart, uint8_t address, uint8_t command, uint8_t *data, uint8_t length)
 {
 	// Wait for any ongoing transmission to finish
-	//while (transmit_busy);
+	while (transmit_busy);
 	transmit_busy = true;
 
 	// Generate packet
@@ -147,6 +149,7 @@ bool packet_available()
 
 	return false;
 }
+
 
 void start_receiving(UART_HandleTypeDef *huart)
 {

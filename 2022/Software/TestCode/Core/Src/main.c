@@ -45,7 +45,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-ADC_HandleTypeDef hadc1;
+ ADC_HandleTypeDef hadc1;
 ADC_HandleTypeDef hadc2;
 
 CAN_HandleTypeDef hcan;
@@ -143,7 +143,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
++  HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -171,7 +171,7 @@ int main(void)
   HAL_TIM_Encoder_Start_IT(&htim1, TIM_CHANNEL_ALL);
 
   init_modules(&huart2); // Start receiving
-  mainboard();
+  //mainboard();
 
 
   /* USER CODE END 2 */
@@ -185,6 +185,28 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
 	  HAL_Delay(100);
+
+	  // Testing <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//	  uint8_t Test[] = "Error. Entered Main.c while(1) line 190\r\n"; //Data to send
+//	  HAL_UART_Transmit(&huart2,Test,sizeof(Test),10);// Sending in normal mode
+	  HAL_Delay(10);
+
+	TxHeader.DLC = 8;  // data length
+	TxHeader.IDE = CAN_ID_STD;
+	TxHeader.RTR = CAN_RTR_DATA;
+	TxHeader.StdId = 0x103;  // ID
+
+	TxData[0] = 23;  // ms delay
+	TxData[1] = 24;  // loop rep
+	TxData[2] = 25;  // ms delay
+	TxData[3] = 26;  // loop rep
+	TxData[4] = 27;  // ms delay
+	TxData[5] = 28;  // loop rep
+	TxData[6] = 29;  // ms delay
+	TxData[7] = 30;  // loop rep
+
+	HAL_CAN_AddTxMessage(&hcan, &TxHeader, TxData, &TxMailbox);
+	  //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
   }
   /* USER CODE END 3 */
@@ -214,6 +236,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
@@ -252,6 +275,7 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 1 */
 
   /* USER CODE END ADC1_Init 1 */
+
   /** Common config
   */
   hadc1.Instance = ADC1;
@@ -265,6 +289,7 @@ static void MX_ADC1_Init(void)
   {
     Error_Handler();
   }
+
   /** Configure Regular Channel
   */
   sConfig.Channel = ADC_CHANNEL_0;
@@ -297,6 +322,7 @@ static void MX_ADC2_Init(void)
   /* USER CODE BEGIN ADC2_Init 1 */
 
   /* USER CODE END ADC2_Init 1 */
+
   /** Common config
   */
   hadc2.Instance = ADC2;
@@ -310,6 +336,7 @@ static void MX_ADC2_Init(void)
   {
     Error_Handler();
   }
+
   /** Configure Regular Channel
   */
   sConfig.Channel = ADC_CHANNEL_4;
@@ -658,4 +685,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-

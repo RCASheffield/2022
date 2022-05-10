@@ -75,8 +75,8 @@ all: main-build
 main-build: TestCode.elf secondary-outputs
 
 # Tool invocations
-TestCode.elf TestCode.map: $(OBJS) $(USER_OBJS) C:\Users\uos\Documents\RCAS\2022\2022\Software\TestCode\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "TestCode.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\uos\Documents\RCAS\2022\2022\Software\TestCode\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TestCode.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+TestCode.elf TestCode.map: $(OBJS) $(USER_OBJS) D:\Work\RCAS\GitLocal\2022\2022\Software\TestCode\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "TestCode.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Work\RCAS\GitLocal\2022\2022\Software\TestCode\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TestCode.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
