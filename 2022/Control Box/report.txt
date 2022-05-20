@@ -1,7 +1,0 @@
-Info: Output directory 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF' created.
-Info: Front (top side) placement file: 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-top-pos.csv'.
-Info: Component count: 23.
-Info: Back (bottom side) placement file: 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-bottom-pos.csv'.
-Info: Component count: 154.
-Info: Full component count: 177.
-Info: File generation successful.

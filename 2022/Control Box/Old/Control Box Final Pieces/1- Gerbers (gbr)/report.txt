@@ -1,0 +1,14 @@
+Info: Output directory 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF' created.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-Top_Copper.gtl'.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-In1_Cu.g2'.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-In2_Cu.g3'.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-Bottom_Copper.gbl'.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-F_Paste.gtp'.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-B_Paste.gbp'.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-F_Silkscreen.gto'.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-B_Silkscreen.gbo'.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-F_Mask.gts'.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-B_Mask.gbs'.
+Plotted to 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-Edge_Cuts.gm1'.
+Created Gerber job file 'D:\Electronics\Repositories\2022\2022\Control Box\Outputs\Manufacturing\PDF\Control Box-job.gbrjob'.
+Info: Done.

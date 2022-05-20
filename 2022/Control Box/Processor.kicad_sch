@@ -1741,7 +1741,7 @@
 
   (no_connect (at 91.44 111.76) (uuid 2b7c4f37-42c0-4571-a44b-b808484d3d74))
   (no_connect (at 101.6 144.78) (uuid bd4b2168-e28b-44c4-9b80-7038bb495999))
-  (no_connect (at 88.9 142.24) (uuid bd4b2168-e28b-44c4-9b80-7038bb495999))
+  (no_connect (at 88.9 142.24) (uuid bd4b2168-e28b-44c4-9b80-7038bb49599a))
   (no_connect (at 101.6 142.24) (uuid d5eb7c6e-b098-49b0-b366-c8b7c67afed0))
 
   (wire (pts (xy 257.81 62.23) (xy 257.81 59.69))
